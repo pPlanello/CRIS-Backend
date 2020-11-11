@@ -39,9 +39,9 @@ public class CSV2DB {
 				Researcher r = new Researcher();
 				r.setId(s[0]);
 				r.setName(s[1]);
-				r.setLastname(s[2]);
+				r.setLastName(s[2]);
 				r.setEmail(s[0]);
-				r.setScopusURL(s[3]);
+				r.setScopusURl(s[3]);
 				r.setPassword("1234");
 				if (null == rdao.read(r.getId())) {
 					rdao.create(r);
