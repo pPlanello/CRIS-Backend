@@ -41,10 +41,10 @@ public class CRISAppTest {
         Researcher r = new Researcher();
         r.setId("010101012");
         r.setName("Juan Carlos");
-        r.setLastname("Dueñas");
+        r.setLastName("Dueñas");
         r.setEmail("juancarlos.duenas@upm.es");
         r.setPassword("1234");
-        r.setScopusURL("http://www.dit.upm.es");
+        r.setScopusURl("http://www.dit.upm.es");
         Response response = target.request()
                 .post(Entity.entity(r, MediaType.APPLICATION_JSON), Response.class);
          
@@ -57,10 +57,10 @@ public class CRISAppTest {
         String rid = "010101012";
         r.setId("010101012");
         r.setName("Juan C.");
-        r.setLastname("Dueñas");
+        r.setLastName("Dueñas");
         r.setEmail("juancarlos.duenas@upm.es");
         r.setPassword("1234");
-        r.setScopusURL("http://www.dit.upm.es");
+        r.setScopusURl("http://www.dit.upm.es");
         Response response = target.path(rid).request()
                 .post(Entity.entity(r, MediaType.APPLICATION_JSON), Response.class);
         System.out.println("testResearchersUpdate() " + response);      
