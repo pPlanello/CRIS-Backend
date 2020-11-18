@@ -5,14 +5,13 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
 @Entity
 public class Researcher implements Serializable {
 	private static final long serialVersionUID =1L;
 	@Id
 	private String id;
 	private String name;
-	private String lastName;
+	private String lastname;
 	private String email;
 	private String password;
 	private String scopusURl;
@@ -32,10 +31,10 @@ public class Researcher implements Serializable {
 		this.name = name;
 	}
 	public String getLastName() {
-		return lastName;
+		return lastname;
 	}
 	public void setLastName(String lastName) {
-		this.lastName = lastName;
+		this.lastname = lastName;
 	}
 	public String getEmail() {
 		return email;
@@ -57,7 +56,7 @@ public class Researcher implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Researcher [id=" + id + ", name=" + name + ", lastName=" + lastName + ", email=" + email + ", password="
+		return "Researcher [id=" + id + ", name=" + name + ", lastname=" + lastname + ", email=" + email + ", password="
 				+ password + ", scopusURl=" + scopusURl + "]";
 	}
 	@Override
@@ -66,7 +65,7 @@ public class Researcher implements Serializable {
 		int result = 1;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((scopusURl == null) ? 0 : scopusURl.hashCode());
 		return result;
@@ -90,10 +89,10 @@ public class Researcher implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (lastName == null) {
-			if (other.lastName != null)
+		if (lastname == null) {
+			if (other.lastname != null)
 				return false;
-		} else if (!lastName.equals(other.lastName))
+		} else if (!lastname.equals(other.lastname))
 			return false;
 		if (name == null) {
 			if (other.name != null)

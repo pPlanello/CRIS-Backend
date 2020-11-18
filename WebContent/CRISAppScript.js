@@ -11,11 +11,10 @@ $(document).ready(function(){
             var len = response.length;
             for(var i=0; i<len; i++){
                 var id = response[i].id;
-                var lastname = response[i].lastname;
+                var lastname = response[i].lastName;
                 var name = response[i].name;
                 var email = response[i].email;
-                var scopusURL = response[i].scopusURL;
-
+                var scopusURL = response[i].scopusURl;
                 var tr_str = "<tr>" +
                     "<td align='center'>" + id + "</td>" +
                     "<td align='center'>" + name + "</td>" +
